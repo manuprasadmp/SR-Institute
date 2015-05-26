@@ -386,6 +386,11 @@ $(document).ready(function()
     });
 
   });
+
+ $.getJSON('../assets/JSON/homeData.json',function(homedata){
+ 	 $('.about #p1').text(homedata.p1);
+ 	 $('.about #p2').text(homedata.p2);
+ });
 });
  
 
