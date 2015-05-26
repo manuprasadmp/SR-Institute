@@ -1,0 +1,20 @@
+{
+	"data":[
+    {"country":"inida","states":["mp","up","TN","Kerala"]},
+    {"country":"America","states":["canada","dsada","ddfg"]}
+	]
+}
+
+// $(document).ready(function(){
+// /* json loading*/
+// $.getJSON("country.json",function(data){
+// $.each(data.country, function (index, d) {
+// $("#country").append("<option value=\"" + d.country + "\">" + d.country + "</option>");
+// // $("#country").on("change",fuction(){
+
+// // });
+
+// });
+// });
+
+// }

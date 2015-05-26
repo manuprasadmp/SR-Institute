@@ -1,0 +1,29 @@
+{
+    "list": [
+        {
+            "country": "inida",
+            "states": [
+                "Maharashtra",
+                "Goa",
+                "Karnataka",
+                "Kerala"
+            ]
+        },
+        {
+            "country": "USA",
+            "states": [
+                "Alaska",
+                "Texas",
+                "South California"
+            ]
+        },
+        {
+            "country": "Italy",
+            "states": [
+                "Rome",
+                "Venice",
+                "Milan"
+            ]
+        }
+    ]
+}
