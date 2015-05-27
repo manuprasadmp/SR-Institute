@@ -1,0 +1,37 @@
+{
+    "image": [
+        {
+            "name": "LG Tone",
+            "model_no": "HBS-730",
+            "type": "Bluetooth Stereo",
+            "price": "�45.00",
+            "stock": 10,
+            "images": "../assets/images/gallery/pic1.jpg"
+        },
+        {
+            "name": "NoiseHush",
+            "model_no": "NX22",
+            "type": "Wired Headphones",
+            "price": "�69.95",
+            "stock": 10,
+            "images": "../assets/images/gallery/film2.jpg"
+        },
+        {
+            "name": "NoiseHush",
+            "model_no": "NX80",
+            "type": "Earphones",
+            "price": "�25.00",
+            "stock": 10,
+            "images": "../assets/images/gallery/class.jpg"
+        },
+        {
+            "name": "Red Pro",
+            "model_no": "S305",
+            "type": "Bluetooth Stereo",
+            "price": "£35.00",
+            "stock": 10,
+            "images": "../assets/images/gallery/film1.jpg"
+        }
+        
+    ]
+}

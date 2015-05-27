@@ -391,6 +391,21 @@ $(document).ready(function()
  	 $('.about #p1').text(homedata.p1);
  	 $('.about #p2').text(homedata.p2);
  });
+
+var url = "../assets/JSON/gallery.json";
+
+$.getJSON(url,function(gallery){
+
+
+    $.each(gallery.image,function()
+    {
+        var output ='<div class="image"><img class="pic" src= "'+this.images+'" alt ="'+this.name+'"><span class="name">'+this.name+'</span></div>';
+        $('.gallery-wrap').append(output);
+    });
+
+    
+});
+
 });
  
 
