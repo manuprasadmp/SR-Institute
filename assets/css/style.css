@@ -3,14 +3,15 @@
 	padding: 0;
 }
 html{
-	/*min-height: 100%;*/
+	height: 100%;
 }
 body{
- background: url(../../assets/images/bg.jpg) no-repeat center center fixed  brightness(50%) ; 
+ /*background: url(../../assets/images/bg.jpg) no-repeat center center fixed  brightness(50%) ; 
 -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
+  height:100%;
 }
 .registraion_form{
     padding: 10px;
@@ -156,7 +157,8 @@ body{
 }
 .social{
 	height: 50px;
-	
+ 	max-width: 75%;
+    margin: 0 auto;
 }
 .social p{
 	float: right;
@@ -218,19 +220,27 @@ body{
   width: 75%;
   margin: 0 auto;
   margin-top: 1%;
+  height: 100%
 }
 .pic{
   /* width: 23%; */
-  /* height: 20%; */
+   /*height: 100%; */
   /* padding: 1%; */
   float: left;
-  max-width: 100%;
-}.image{
-	  display: block;
+  width: 100%;
+  transition: all .2s ease-in-out;
+
+}
+.pic:hover{
+  transition: all .2s ease-in-out;
+}
+.image{
+  display: block;
   position: relative;
-  width: 23%;
+  width: 22%;
   float: left;
   padding: 1%;
+  margin: .2%;
 }
 .image span{
   display: none;
@@ -247,6 +257,10 @@ background-color:rgb(233, 210, 141);
 display: block;
 
 }
+.menuIcon{
+	display:none;
+	float: right;
+}
 /* @media screen  and (min-width: 908px) {
 
 .headerWrap,.social,.gallery-wrap{
@@ -259,15 +273,62 @@ display: block;
 }
 
 }
-@media screen  and (max-width: 908px) {
-
-	.picSlider{
-   
-  width: 100%;
-  
-	}
-	.about{
-		width: 100%;
-	}
+@media screen  and (max-width: 640px) {
+.menuIcon{
+	display:block;
+}
+	
 }
  */
+  .black_overlay{
+        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index:1001;
+        -moz-opacity: 0.8;
+        opacity:.80;
+        filter: alpha(opacity=80);
+    }
+    .popup_image {
+        display: none;
+        position: absolute;
+        top: 15%;
+        left: 25%;
+        width: 50%;
+        padding: 16px;
+        border: 16px solid orange;
+        background-color: white;
+        z-index:1002;
+        
+    }
+
+    .popup_image .close_btn{
+  		float: right;
+ 		color: rgb(15, 11, 2);
+ 		padding: 1%;
+ 		text-decoration: none;
+    }
+    .next{
+    	float: right;
+    }
+    .previous{
+		float: left;
+    }
+    .enlarged_pic{
+    	width:100%;
+    	display: inline-block;
+    }
+    .popup_image .name{
+        color: rgb(28, 79, 137);
+  		font-weight: 900;
+  		font-size: large;
+}
+    .details span{
+    	  display: block;
+
+    }
+    

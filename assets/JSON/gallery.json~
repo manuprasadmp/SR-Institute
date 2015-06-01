@@ -3,18 +3,92 @@
         {
             "name": "LG Tone",
             "model_no": "HBS-730",
-            "type": "Bluetooth Stereo",
+            "type": "Camera Red",
             "price": "�45.00",
             "stock": 10,
-            "images": "../assets/images/gallery/pic1.jpg"
+            "images": "../assets/images/gallery/t1.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t1.jpg",
+            "idname":"pic1"
         },
         {
             "name": "NoiseHush",
             "model_no": "NX22",
-            "type": "Wired Headphones",
+            "type": "Old Camera",
             "price": "�69.95",
             "stock": 10,
-            "images": "../assets/images/gallery/film2.jpg"
+            "images": "../assets/images/gallery/t2.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t2.jpg",
+            "idname":"pic2"
+        },
+        {
+            "name": "NoiseHush",
+            "model_no": "NX80",
+            "type": "Editing Works",
+            "price": "�25.00",
+            "stock": 10,
+            "images": "../assets/images/gallery/t3.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t3.jpg",
+            "idname":"pic3"
+        },
+        {
+            "name": "Red Pro",
+            "model_no": "S305",
+            "type": "Lighting Field",
+            "price": "£35.00",
+            "stock": 10,
+            "images": "../assets/images/gallery/t4.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t4.jpg",
+            "idname":"pic4"
+        },
+        {
+            "name": "NoiseHush",
+            "model_no": "NX22",
+            "type": "Movie Preview",
+            "price": "�69.95",
+            "stock": 10,
+            "images": "../assets/images/gallery/t5.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t5.jpg",
+            "idname":"pic5"
+        },
+        {
+            "name": "NoiseHush",
+            "model_no": "Black Magic",
+            "type": "Camera",
+            "price": "�25.00",
+            "stock": 10,
+            "images": "../assets/images/gallery/t6.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t6.jpg",
+            "idname":"pic6"
+        },
+        {
+            "name": "Red Pro",
+            "model_no": "S305",
+            "type": "Candles",
+            "price": "£35.00",
+            "stock": 10,
+            "images": "../assets/images/gallery/t7.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t7.jpg",
+            "idname":"pic7"
+        },
+        {
+            "name": "LG Tone",
+            "model_no": "HBS-730",
+            "type": "Bluetooth Stereo",
+            "price": "�45.00",
+            "stock": 10,
+            "images": "../assets/images/gallery/t1.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t1.jpg",
+            "idname":"pic8"
+        },
+        {
+            "name": "NoiseHush",
+            "model_no": "NX22",
+            "type": "Old Camera",
+            "price": "�69.95",
+            "stock": 10,
+            "images": "../assets/images/gallery/t2.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t2.jpg",
+            "idname":"pic9"
         },
         {
             "name": "NoiseHush",
@@ -22,7 +96,9 @@
             "type": "Earphones",
             "price": "�25.00",
             "stock": 10,
-            "images": "../assets/images/gallery/class.jpg"
+            "images": "../assets/images/gallery/t3.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t3.jpg",
+            "idname":"pic10"
         },
         {
             "name": "Red Pro",
@@ -30,8 +106,40 @@
             "type": "Bluetooth Stereo",
             "price": "£35.00",
             "stock": 10,
-            "images": "../assets/images/gallery/film1.jpg"
+            "images": "../assets/images/gallery/t4.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t4.jpg",
+            "idname":"pic11"
         },
+        {
+            "name": "NoiseHush",
+            "model_no": "NX22",
+            "type": "Wired Headphones",
+            "price": "�69.95",
+            "stock": 10,
+            "images": "../assets/images/gallery/t5.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t5.jpg",
+            "idname":"pic12"
+        },
+        {
+            "name": "NoiseHush",
+            "model_no": "NX80",
+            "type": "Earphones",
+            "price": "�25.00",
+            "stock": 10,
+            "images": "../assets/images/gallery/t6.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t6.jpg",
+            "idname":"pic13"
+        },
+        {
+            "name": "Red Pro",
+            "model_no": "S305",
+            "type": "Bluetooth Stereo",
+            "price": "£35.00",
+            "stock": 10,
+            "images": "../assets/images/gallery/t7.jpg",
+            "thumbnails": "../assets/images/gallery/thumbnails/t7.jpg",
+            "idname":"pic14"
+        }
         
     ]
 }

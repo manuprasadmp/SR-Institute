@@ -356,7 +356,16 @@ function store()
 	
 }
 
-
+function popup(d){
+	var picid=d.id;
+	document.getElementById(picid).style.display='block';
+    document.getElementById('fade').style.display='block';
+}
+function close_popup(d){
+	var picid=d.id;
+	document.getElementById(picid).style.display='none';
+	document.getElementById('fade').style.display='none';
+}
 
 
 $(document).ready(function()
@@ -399,8 +408,17 @@ $.getJSON(url,function(gallery){
 
     $.each(gallery.image,function()
     {
-        var output ='<div class="image"><img class="pic" src= "'+this.images+'" alt ="'+this.name+'"><span class="name">'+this.name+'</span></div>';
-        $('.gallery-wrap').append(output);
+    	// console.log(this.id);
+    	// var $idname="pic";
+    	// console.log($idname);
+        var $output ='<div class="image" onclick="popup('+this.idname+')"><img class="pic" src= "'+this.thumbnails+'" alt ="'+this.name+'"><span class="name">'+this.name+'</span></div>';
+        $('.gallery-wrap').append($output);
+        // var details='<div  id="light" name="'+this.name+'" class="popup_image"><a href = "javascript:void(0)" onclick = "close_popup()">&#10799;</a><span class="name">'+this.name+'</span><img class="enlarged_pic" src= "'+this.images+'" alt ="'+this.name+'"></div>';
+        // $('.popup_container').append(details);
+
+        var $details='<div  id="'+this.idname+'"  class="popup_image"><a class="close_btn" href = "javascript:void(0)" onclick = "close_popup('+this.idname+')">&#10799;</a><span class="name">'+this.name+'</span><img class="enlarged_pic" src= "'+this.images+'" alt ="'+this.name+'"><div class="details"><span class="model">Model no: '+this.model_no+'</span><span class="model">Type: '+this.type+'</span></div></div>';
+        $('.popup_container').append($details);
+
     });
 
     
