@@ -370,6 +370,9 @@ function close_popup(d){
 
 $(document).ready(function()
 {
+	$("#menu").click(function(){
+	$("#menu_box").slideToggle();
+	});
    /* json loading*/
  $.getJSON('../assets/JSON/country.json',function(data){
  $('#country').html('<option value="" disabled selected class="place">Country</option>');
