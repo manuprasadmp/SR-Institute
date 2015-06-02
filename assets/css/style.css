@@ -102,6 +102,7 @@ body{
 .headerWrap{
   max-width: 75%;
   margin: 0 auto;	
+  height: 100%;
 }
 .slider {
 	  margin-bottom: 86px;
@@ -257,10 +258,28 @@ background-color:rgb(233, 210, 141);
 display: block;
 
 }
-.menuIcon{
+.menuIcon,#menu_box{
 	display:none;
-	float: right;
+	}
+	#menu_box a, #menu_box ul{
+text-decoration: none;
+ list-style-type: none;
+color: white;
 }
+ #menu_box a{
+padding: 20%;
+ }
+#menu_box li{
+  background-color: rgb(5, 23, 29);
+  padding: 20% 0;
+  text-align: center;
+  margin: 2%;
+}
+#menu_box li:hover{
+	background-color: rgb(33, 39, 41);
+}
+
+
 /* @media screen  and (min-width: 908px) {
 
 .headerWrap,.social,.gallery-wrap{
@@ -272,14 +291,35 @@ display: block;
   max-width: 26%;
 }
 
-}
-@media screen  and (max-width: 640px) {
+}*/
+@media screen  and (max-width:840px) {
 .menuIcon{
-	display:block;
+  position: relative;
+  display: block;
+  height: 100%;
+  float: right;
 }
-	
+.navbar{
+	display:none;
 }
- */
+.menuIcon img{
+	height: 75%;
+    margin-top: 17%;
+    margin-right: 5%;
+    }	
+#menu_box{
+    	
+  		float: right;
+  		position: absolute;
+ 		top: 100%;
+ 		right: 0;
+        width: 290%;
+  		background-color: white;	
+    }
+.headerWrap{
+  max-width: 100%;
+}
+
   .black_overlay{
         display: none;
         position: fixed;
