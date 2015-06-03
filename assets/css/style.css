@@ -1,6 +1,6 @@
 *{
 	margin: 0;
-	padding: 0;
+	padding:0;
 }
 html{
 	height: 100%;
@@ -76,7 +76,7 @@ body{
 }
 .checkbox p{
 	
-     font-size: 15px;
+  font-size: 15px;
   margin: 20px;
 
 
@@ -94,7 +94,7 @@ body{
 	clear:both;
 }
 .head{
-	  height: 70px;
+	height: 70px;
 	background-color:#2F5C6C;
 	/*margin-bottom: 20px;*/
 
@@ -292,33 +292,7 @@ padding: 20%;
 }
 
 }*/
-@media screen  and (max-width:840px) {
-.menuIcon{
-  position: relative;
-  display: block;
-  height: 100%;
-  float: right;
-}
-.navbar{
-	display:none;
-}
-.menuIcon img{
-	height: 75%;
-    margin-top: 17%;
-    margin-right: 5%;
-    }	
-#menu_box{
-    	
-  		float: right;
-  		position: absolute;
- 		top: 100%;
- 		right: 0;
-        width: 290%;
-  		background-color: white;	
-    }
-.headerWrap{
-  max-width: 100%;
-}
+
 
   .black_overlay{
         display: none;
@@ -334,7 +308,7 @@ padding: 20%;
         filter: alpha(opacity=80);
     }
     .popup_image {
-        display: none;
+        display:none;
         position: absolute;
         top: 15%;
         left: 25%;
@@ -372,3 +346,31 @@ padding: 20%;
 
     }
     
+@media screen  and (max-width:840px) {
+.menuIcon{
+  position: relative;
+  display: block;
+  height: 100%;
+  float: right;
+}
+.navbar{
+	display:none;
+}
+.menuIcon img{
+	height: 75%;
+    margin-top: 17%;
+    margin-right: 5%;
+    }	
+#menu_box{
+    	
+  		float: right;
+  		position: absolute;
+ 		top: 100%;
+ 		right: 0;
+        width: 290%;
+  		background-color: white;	
+    }
+.headerWrap{
+  max-width: 98%;
+     }
+}
