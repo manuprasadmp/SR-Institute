@@ -10,35 +10,19 @@
 
 </head>
 <body>
-<header class="head">
-<div class="headerWrap">
-    <div class="logo">
-        <a href="homePage.html"></a>
-    </div>
-    
-    <p>SR Institute</p>
-    
-    <nav class="navbar">
-   
-        <a href="homePage.html">Home</a>
-
-    </nav>
-
-    <div class="clear"></div>
-</div>
-</header>
+<header class="head"></header>
 
 <div class="register_wrap">
 <h1>Registration Form</h1>
 <form class="registraion_form">
 	
-	<div class="input-wrap">
+	<div class="input_wrap">
 	<label for="userName">User Name</label>
 	<input type="text"  id ="uname" onfocusout="unameValidation()"/>
 	
 	</div>
 	
-	<div class="gender input-wrap">
+	<div class="gender input_wrap">
 	<label id="gender">Gender</label>
     <span class="gen">
     <input type="radio" name="sex" value="male" checked="checked">
@@ -48,26 +32,26 @@
     </span>
     </div>
 
-    <div class="input-wrap">
+    <div class="input_wrap">
     	<label for="date">Date of Birth</label>
         <input type="text" value="" placeholder="dd/mm/yyyy" class="dob" id="dob" onkeyup="appendSlash()" onfocusout="age();"/>
     </div>
-    <div class="input-wrap">
+    <div class="input_wrap">
     <label for="age">Age</label><p id="age" ></p>
     </div>
     <div class="clear"></div>
 
-    <div class="input-wrap">
+    <div class="input_wrap">
     	<label for="email">Email</label>
         <input type="text" id="email" name="eid" onfocusout="emailValidation()" />
     </div>
     
-    <div class="input-wrap">
+    <div class="input_wrap">
     	<label for="address">Address</label>
     	<textarea class="address" id="address" onfocusout="addressValidation()"></textarea>
     </div>
     
-    <div class="input-wrap">
+    <div class="input_wrap">
     	<label for="country">Country</label>
          <select id="country">  
         <!--  <option value="Australia">Australia </option>  
@@ -78,7 +62,7 @@
 		 </select>
 
     </div>
-    <div class="input-wrap">
+    <div class="input_wrap">
          <label for="state">State</label>
          <select id="state">
          <!--  <option value="Australia">Australia </option>  
@@ -86,17 +70,17 @@
          </select>
     </div>
 
-   <div class="input-wrap language">
+   <div class="input_wrap language">
        <label> Language</label>
        <input type="checkbox" name="en" value="English" checked /><span>English</span> 
        <input type="checkbox" name="en" value="Non English" /><span>Non English</span>
    </div>
-    <div class="input-wrap">
+    <div class="input_wrap">
         <label for="address">Password</label>
     	<input type="password"  class="pwd" onfocusout="pwdValidation()"/>
     </div>
 
-    <div class="input-wrap">
+    <div class="input_wrap">
     	<label for="address">Confirm Password</label>
     	<input type="password" class="confirmpwd" onfocusout="pwdValidation()"/>
     </div>
@@ -108,7 +92,7 @@
         <label for="agree_check">I Agree</label>
     </div>
 
-    <div class="input-wrap ">
+    <div class="input_wrap ">
     	<input type="button" class="submit_btn" value="Submit" onclick="saveProfile()" />
     </div>
    

@@ -178,13 +178,13 @@ function age(){
 			var yy = parseInt(splitdate[2]);
 			validDate(dd,mm,yy,fieldSelector);
 		   }
-	  /* else if(textLength==8){
+	   else if(textLength==8){
            var dd = parseInt(Val_date.substring(0, 2));
 			var mm=parseInt(Val_date.substring(2, 4));
 			var yy=parseInt(Val_date.substring(4));
 			
             validDate(dd,mm,yy,fieldSelector);
-		   }*/
+		   }
 		 else{
 		   	$(fieldSelector).parent().append("<p class='error'>Invalid date format</p>");
 
@@ -366,14 +366,13 @@ function close_popup(d){
 	document.getElementById(picid).style.display='none';
 	document.getElementById('fade').style.display='none';
 }
-
-
+function addHeader() {
+	$('.head').load('header.html');
+}
 $(document).ready(function()
 {
-	$("#menu").click(function(){
-	$("#menu_box").slideToggle();
-	});
-   /* json loading*/
+	addHeader();
+	/* json loading*/
  $.getJSON('../assets/JSON/country.json',function(data){
  $('#country').html('<option value="" disabled selected class="place">Country</option>');
   $('#state').html('<option value="" disabled selected class="place">State</option>');
@@ -415,7 +414,7 @@ $.getJSON(url,function(gallery){
     	// var $idname="pic";
     	// console.log($idname);
         var $output ='<div class="image" onclick="popup('+this.idname+')"><img class="pic" src= "'+this.thumbnails+'" alt ="'+this.name+'"><span class="name">'+this.name+'</span></div>';
-        $('.gallery-wrap').append($output);
+        $('.gallery_wrap').append($output);
         // var details='<div  id="light" name="'+this.name+'" class="popup_image"><a href = "javascript:void(0)" onclick = "close_popup()">&#10799;</a><span class="name">'+this.name+'</span><img class="enlarged_pic" src= "'+this.images+'" alt ="'+this.name+'"></div>';
         // $('.popup_container').append(details);
 

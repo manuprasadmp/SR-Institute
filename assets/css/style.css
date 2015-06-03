@@ -20,18 +20,18 @@ body{
     box-shadow: 0 10px 6px -6px rgb(157, 148, 148);
     border: 1px solid #4aa093;
 	}
-.input-wrap{
+.input_wrap{
 	padding: 5px;
 		}
 
-.input-wrap label,#gender{
+.input_wrap label,#gender{
 	width:120px;
 	display: inline-block;
 	text-align: left;
 	float: left;
 	}
   
-.input-wrap input,.input-wrap textarea,.input-wrap select{
+.input_wrap input,.input_wrap textarea,.input_wrap select{
    
     width:171px;
 
@@ -78,8 +78,9 @@ body{
 	
   font-size: 15px;
   margin: 20px;
-
-
+}
+.checkbox label{
+  text-align: right;
 }
 .error, #error{
 	background-color: black;
@@ -87,7 +88,7 @@ body{
 	color: white;
 	width: auto;
 }
-.input-wrap #age{
+.input_wrap #age{
 	display: inline;
 }
 .clear{
@@ -99,7 +100,7 @@ body{
 	/*margin-bottom: 20px;*/
 
 }
-.headerWrap{
+.header_wrap{
   max-width: 75%;
   margin: 0 auto;	
   height: 100%;
@@ -217,7 +218,7 @@ body{
 
 }
 /* gallery*/
-.gallery-wrap{
+.gallery_wrap{
   width: 75%;
   margin: 0 auto;
   margin-top: 1%;
@@ -229,11 +230,11 @@ body{
   /* padding: 1%; */
   float: left;
   width: 100%;
-  transition: all .2s ease-in-out;
-
+  transition: all .21s ease-in-out;
+  cursor: pointer;
 }
 .pic:hover{
-  transition: all .2s ease-in-out;
+   transform: scale(1.04); 
 }
 .image{
   display: block;
@@ -258,8 +259,9 @@ background-color:rgb(233, 210, 141);
 display: block;
 
 }
-.menuIcon,#menu_box{
+.menu_icon,#menu_box{
 	display:none;
+	z-index: 1;
 	}
 	#menu_box a, #menu_box ul{
 text-decoration: none;
@@ -280,20 +282,6 @@ padding: 20%;
 }
 
 
-/* @media screen  and (min-width: 908px) {
-
-.headerWrap,.social,.gallery-wrap{
-   margin: 0 auto;
-  width: 983px;
-  max-width: 75%;
-  margin: 0 auto;
-  width: 983px;
-  max-width: 26%;
-}
-
-}*/
-
-
   .black_overlay{
         display: none;
         position: fixed;
@@ -309,8 +297,8 @@ padding: 20%;
     }
     .popup_image {
         display:none;
-        position: absolute;
-        top: 15%;
+        position: fixed;
+        top: 10%;
         left: 25%;
         width: 50%;
         padding: 16px;
@@ -347,7 +335,7 @@ padding: 20%;
     }
     
 @media screen  and (max-width:840px) {
-.menuIcon{
+.menu_icon{
   position: relative;
   display: block;
   height: 100%;
@@ -356,7 +344,7 @@ padding: 20%;
 .navbar{
 	display:none;
 }
-.menuIcon img{
+.menu_icon img{
 	height: 75%;
     margin-top: 17%;
     margin-right: 5%;
@@ -370,7 +358,42 @@ padding: 20%;
         width: 290%;
   		background-color: white;	
     }
-.headerWrap{
+.header_wrap, .social{
   max-width: 98%;
      }
+.popup_image {
+	    top: 14%;
+        left: 20%;
+ }
+}
+@media screen  and (max-width:840px) {
+	.image{
+		width: 30%;
+	}
+.popup_image {
+	top: 14%;
+left: 20%;
+ }
+}
+@media screen  and (max-width:580px) {
+	.image{
+		width: 47%;
+	}
+.popup_image {
+	top: 15%;
+	left: 17%;
+ }
+}
+
+@media screen  and (max-width:380px) {
+	.image{
+		width: 99%;
+	}
+.popup_image {
+	top: 15%;
+	left: 17%;
+ }
+ .head p {
+ 	font-size: 30px;
+ }
 }
