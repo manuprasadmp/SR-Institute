@@ -356,29 +356,81 @@ function store()
 	
 }
 
-function popup(d){
-	var picid=d.id;
-	document.getElementById(picid).style.display='block';
+function open_popup(activeImg,imgIndex,totalImg){
+	var picId=activeImg.idname;
+	var $details='<div  id="'+picId+'"  class="popup_image"><a class="close_btn" href = "javascript:void(0)" onclick = "close_popup('+picId+')">&#10799;</a><a class="previous" href = "javascript:void(0)" onclick = "prev_image('+totalImg+','+imgIndex+')"><img src="../assets/images/prev.png"></a><a class="next" href = "javascript:void(0)" onclick = "next_image('+totalImg+','+imgIndex+')"><img src="../assets/images/next.png"></a><span class="name">'+activeImg.name+'</span><img class="enlarged_pic" src= "'+activeImg.images+'"><div class="details"><span class="model">Model no: '+activeImg.model_no+'</span><span class="model">Type: '+activeImg.type+'</span></div></div>';
+	$('.popup_container').html($details);
+	document.getElementById(picId).style.display='block';
     document.getElementById('fade').style.display='block';
 }
-function close_popup(d){
-	var picid=d.id;
-	document.getElementById(picid).style.display='none';
-	document.getElementById('fade').style.display='none';
+function close_popup(picId){
+	navCount=0;
+	$(picId).hide();
+	$('#fade').hide();
 }
+
+function prev_image(totalImg,imgIndex){
+
+	var imgIndex=imgIndex-1;
+	console.log(imgIndex);
+	var activeImg;
+	var picId;
+	if(imgIndex<0){
+		 imgIndex=totalImg-1;
+		 activeImg=img.image[totalImg-1];
+		 picId= activeImg.idname;
+		 var $details='<div  id="'+picId+'"  class="popup_image"><a class="close_btn" href = "javascript:void(0)" onclick = "close_popup('+picId+')">&#10799;</a><a class="previous" href = "javascript:void(0)" onclick = "prev_image('+totalImg+','+imgIndex+')"><img src="../assets/images/prev.png"></a><a class="next" href = "javascript:void(0)" onclick = "next_image('+totalImg+','+imgIndex+')"><img src="../assets/images/next.png"></a><span class="name">'+activeImg.name+'</span><img class="enlarged_pic" src= "'+activeImg.images+'"><div class="details"><span class="model">Model no: '+activeImg.model_no+'</span><span class="model">Type: '+activeImg.type+'</span></div></div>';
+	     $('.popup_container').html($details);
+	}
+	else{
+		 activeImg=img.image[imgIndex];
+		 picId= activeImg.idname;
+		 var $details='<div  id="'+picId+'"  class="popup_image"><a class="close_btn" href = "javascript:void(0)" onclick = "close_popup('+picId+')">&#10799;</a><a class="previous" href = "javascript:void(0)" onclick = "prev_image('+totalImg+','+imgIndex+')"><img src="../assets/images/prev.png"></a><a class="next" href = "javascript:void(0)" onclick = "next_image('+totalImg+','+imgIndex+')"><img src="../assets/images/next.png"></a><span class="name">'+activeImg.name+'</span><img class="enlarged_pic" src= "'+activeImg.images+'"><div class="details"><span class="model">Model no: '+activeImg.model_no+'</span><span class="model">Type: '+activeImg.type+'</span></div></div>';
+	     $('.popup_container').html($details);
+		 }
+	
+	$('#fade').show();
+	document.getElementById(picId).style.display='block';
+}
+function next_image(totalImg,imgIndex){
+
+	var imgIndex=imgIndex+1;
+	console.log(imgIndex);
+	var activeImg;
+	var picId;
+	if(imgIndex>13){
+		 imgIndex=0;
+		 activeImg=img.image[0];
+		 picId= activeImg.idname;
+		 var $details='<div  id="'+picId+'"  class="popup_image"><a class="close_btn" href = "javascript:void(0)" onclick = "close_popup('+picId+')">&#10799;</a><a class="previous" href = "javascript:void(0)" onclick = "prev_image('+totalImg+','+imgIndex+')"><img src="../assets/images/prev.png"></a><a class="next" href = "javascript:void(0)" onclick = "next_image('+totalImg+','+imgIndex+')"><img src="../assets/images/next.png"></a><span class="name">'+activeImg.name+'</span><img class="enlarged_pic" src= "'+activeImg.images+'"><div class="details"><span class="model">Model no: '+activeImg.model_no+'</span><span class="model">Type: '+activeImg.type+'</span></div></div>';
+	     $('.popup_container').html($details);
+	}
+	else{
+		 activeImg=img.image[imgIndex];
+		 picId= activeImg.idname;
+		 var $details='<div  id="'+picId+'"  class="popup_image"><a class="close_btn" href = "javascript:void(0)" onclick = "close_popup('+picId+')">&#10799;</a><a class="previous" href = "javascript:void(0)" onclick = "prev_image('+totalImg+','+imgIndex+')"><img src="../assets/images/prev.png"></a><a class="next" href = "javascript:void(0)" onclick = "next_image('+totalImg+','+imgIndex+')"><img src="../assets/images/next.png"></a><span class="name">'+activeImg.name+'</span><img class="enlarged_pic" src= "'+activeImg.images+'"><div class="details"><span class="model">Model no: '+activeImg.model_no+'</span><span class="model">Type: '+activeImg.type+'</span></div></div>';
+	     $('.popup_container').html($details);
+		 }
+	
+	$('#fade').show();
+	document.getElementById(picId).style.display='block';
+}
+
+
 function addHeader() {
 	$('.head').load('header.html');
 }
-$(document).ready(function()
-{
+ var $details;
+var img;
+$(document).ready(function(){
 	addHeader();
-	/* json loading*/
- $.getJSON('../assets/JSON/country.json',function(data){
- $('#country').html('<option value="" disabled selected class="place">Country</option>');
-  $('#state').html('<option value="" disabled selected class="place">State</option>');
-  $.each(data.list, function (index, d) {
-    $("#country").append("<option value=\"" + d.country + "\">" + d.country + "</option>");
-  });
+/* json loading*/
+   $.getJSON('../assets/JSON/country.json',function(data){
+   $('#country').html('<option value="" disabled selected class="place">Country</option>');
+   $('#state').html('<option value="" disabled selected class="place">State</option>');
+   $.each(data.list, function (index, d) {
+   $("#country").append("<option value=\"" + d.country + "\">" + d.country + "</option>");
+   });
 
     $("#country").on("change",function(){
     $('#state').empty(); 
@@ -403,28 +455,29 @@ $(document).ready(function()
  	 $('.about #p2').text(homedata.p2);
  });
 
-var url = "../assets/JSON/gallery.json";
-
-$.getJSON(url,function(gallery){
 
 
-    $.each(gallery.image,function()
+$.getJSON("../assets/JSON/gallery.json",function(gallery){
+img=gallery;
+var totalImg=gallery.image.length;
+    $.each(gallery.image,function(index)
     {
-    	// console.log(this.id);
-    	// var $idname="pic";
-    	// console.log($idname);
-        var $output ='<div class="image" onclick="popup('+this.idname+')"><img class="pic" src= "'+this.thumbnails+'" alt ="'+this.name+'"><span class="name">'+this.name+'</span></div>';
+    	var $output ='<div class="image"  data-index="'+index+'" ><img class="pic" src= "'+this.thumbnails+'" alt ="'+this.name+'"><span class="name">'+this.name+'</span></div>';
         $('.gallery_wrap').append($output);
-        // var details='<div  id="light" name="'+this.name+'" class="popup_image"><a href = "javascript:void(0)" onclick = "close_popup()">&#10799;</a><span class="name">'+this.name+'</span><img class="enlarged_pic" src= "'+this.images+'" alt ="'+this.name+'"></div>';
-        // $('.popup_container').append(details);
-
-        var $details='<div  id="'+this.idname+'"  class="popup_image"><a class="close_btn" href = "javascript:void(0)" onclick = "close_popup('+this.idname+')">&#10799;</a><span class="name">'+this.name+'</span><img class="enlarged_pic" src= "'+this.images+'" alt ="'+this.name+'"><div class="details"><span class="model">Model no: '+this.model_no+'</span><span class="model">Type: '+this.type+'</span></div></div>';
-        $('.popup_container').append($details);
-
+              
     });
 
+$(".image").bind("click", function() {
+	var imgIndex=$(this).data("index");
+	var activeImg=img.image[imgIndex];
+
+	open_popup(activeImg,imgIndex,totalImg);
+	
+});
     
 });
+
+
 
 });
  

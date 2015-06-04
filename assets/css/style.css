@@ -309,10 +309,13 @@ padding: 20%;
     }
 
     .popup_image .close_btn{
-  		float: right;
- 		color: rgb(15, 11, 2);
- 		padding: 1%;
- 		text-decoration: none;
+		float: right;
+		color: rgb(255, 255, 255);
+		background-color: red;
+		text-decoration: none;
+		border-radius: 11px;
+		padding: 1px 4px;
+
     }
     .next{
     	float: right;
@@ -325,9 +328,11 @@ padding: 20%;
     	display: inline-block;
     }
     .popup_image .name{
-        color: rgb(28, 79, 137);
-  		font-weight: 900;
-  		font-size: large;
+	  color: rgb(28, 79, 137);
+	  font-weight: 900;
+	  /*font-size: 22px;*/
+	  position: absolute;
+	  left: 42%;
 }
     .details span{
     	  display: block;
@@ -395,5 +400,12 @@ left: 20%;
  }
  .head p {
  	font-size: 30px;
+ }
+ .popup_image .name {
+ 	margin-left: -16%;
+    font-size: 14px;
+ }
+ .previous img,.next img{
+ 	width: 25px;
  }
 }
