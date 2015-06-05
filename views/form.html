@@ -1,113 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		Registration Form
-	</title>
+	<title>Registration Form</title>
 	<link type="text/css" rel="stylesheet"
 	href="../assets/css/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 <body>
-<header class="head"></header>
-
-<div class="register_wrap">
-<h1>Registration Form</h1>
-<form class="registraion_form">
-	
-	<div class="input_wrap">
-	<label for="userName">User Name</label>
-	<input type="text"  id ="uname" onfocusout="unameValidation()"/>
-	
-	</div>
-	
-	<div class="gender input_wrap">
-	<label id="gender">Gender</label>
-    <span class="gen">
-    <input type="radio" name="sex" value="male" checked="checked">
-    <label id ="male">Male</label>
-    <input type="radio" name="sex" value="female">
-    <label id="female">Female</label>
-    </span>
+    <header class="head"></header>
+    <div class="register_wrap">
+        <h1>Registration Form</h1>
+        <form class="registraion_form">
+        	<div class="input_wrap">
+            	<label for="userName">User Name</label>
+            	<input type="text"  id ="uname" onfocusout="unameValidation()"/>
+        	</div>
+        	<div class="gender input_wrap">
+            	<label id="gender">Gender</label>
+                <span class="gen">
+                <input type="radio" name="sex" value="male" checked="checked">
+                <label id ="male">Male</label>
+                <input type="radio" name="sex" value="female">
+                <label id="female">Female</label>
+                </span>
+            </div>
+            <div class="input_wrap">
+            	<label for="date">Date of Birth</label>
+                <input type="text" value="" placeholder="dd/mm/yyyy" class="dob" id="dob" onkeyup="appendSlash()" onfocusout="age();"/>
+            </div>
+            <div class="input_wrap">
+                <label for="age">Age</label><p id="age" ></p>
+            </div>
+            <div class="clear"></div>
+            <div class="input_wrap">
+            	<label for="email">Email</label>
+                <input type="text" id="email" name="eid" onfocusout="emailValidation()" />
+            </div>
+            <div class="input_wrap">
+            	<label for="address">Address</label>
+            	<textarea class="address" id="address" onfocusout="addressValidation()"></textarea>
+            </div>
+            <div class="input_wrap">
+            	<label for="country">Country</label>
+                <select id="country">  
+        		</select>
+            </div>
+            <div class="input_wrap">
+                <label for="state">State</label>
+                <select id="state">
+                </select>
+            </div>
+            <div class="input_wrap language">
+                <label> Language</label>
+                <input type="checkbox" name="en" value="English" checked /><span>English</span> 
+                <input type="checkbox" name="en" value="Non English" /><span>Non English</span>
+            </div>
+            <div class="input_wrap">
+                <label for="address">Password</label>
+            	<input type="password"  class="pwd" onfocusout="pwdValidation()"/>
+            </div>
+            <div class="input_wrap">
+            	<label for="address">Confirm Password</label>
+            	<input type="password" class="confirmpwd" onfocusout="pwdValidation()"/>
+            </div>
+            <div class="input_wrap checkbox">
+                <p>I agree that above specified details are true and<br/>
+                shall provide the concern certificates on request.</p>
+                <input type="checkbox" id="agree_check" class="form_check"/>
+                <label for="agree_check">I Agree</label>
+            </div>
+            <div class="input_wrap ">
+            	<input type="button" class="submit_btn" value="Submit" onclick="saveProfile()" />
+            </div>   
+        </form>	
     </div>
-
-    <div class="input_wrap">
-    	<label for="date">Date of Birth</label>
-        <input type="text" value="" placeholder="dd/mm/yyyy" class="dob" id="dob" onkeyup="appendSlash()" onfocusout="age();"/>
+    <footer class="footer"> 
+    <div class="social">
+        <a href="#" id="fb"></a>
+        <a href="#" id="tt"></a>
+        <p>Follow us on</p>
     </div>
-    <div class="input_wrap">
-    <label for="age">Age</label><p id="age" ></p>
-    </div>
-    <div class="clear"></div>
-
-    <div class="input_wrap">
-    	<label for="email">Email</label>
-        <input type="text" id="email" name="eid" onfocusout="emailValidation()" />
-    </div>
-    
-    <div class="input_wrap">
-    	<label for="address">Address</label>
-    	<textarea class="address" id="address" onfocusout="addressValidation()"></textarea>
-    </div>
-    
-    <div class="input_wrap">
-    	<label for="country">Country</label>
-         <select id="country">  
-        <!--  <option value="Australia">Australia </option>  
-		 <option value="Canada">Canada</option>  
-		 <option value="India" selected="true">India</option>  
-		 <option value="Russia">Russia</option>  
-		 <option value="USA">USA</option>  --> 
-		 </select>
-
-    </div>
-    <div class="input_wrap">
-         <label for="state">State</label>
-         <select id="state">
-         <!--  <option value="Australia">Australia </option>  
-         <option value="Canada">Canada</option>   -->
-         </select>
-    </div>
-
-   <div class="input_wrap language">
-       <label> Language</label>
-       <input type="checkbox" name="en" value="English" checked /><span>English</span> 
-       <input type="checkbox" name="en" value="Non English" /><span>Non English</span>
-   </div>
-    <div class="input_wrap">
-        <label for="address">Password</label>
-    	<input type="password"  class="pwd" onfocusout="pwdValidation()"/>
-    </div>
-
-    <div class="input_wrap">
-    	<label for="address">Confirm Password</label>
-    	<input type="password" class="confirmpwd" onfocusout="pwdValidation()"/>
-    </div>
-    
-    <div class="input_wrap checkbox">
-    <p>I agree that above specified details are true and</br>
-       shall provide the concern certificates on request.</p>
-        <input type="checkbox" id="agree_check" class="form_check" />
-        <label for="agree_check">I Agree</label>
-    </div>
-
-    <div class="input_wrap ">
-    	<input type="button" class="submit_btn" value="Submit" onclick="saveProfile()" />
-    </div>
-   
-</form>	
-
-</div>
-<footer class="footer"> 
-<div class="social">
-    <a href="#" id="fb"></a>
-    <a href="#" id="tt"></a>
-    <p>Follow us on</p>
-</div>
-</footer>
-<script type="text/javascript" src="../assets/js/jquery-2.1.3.min.js"></script>
-	 <script type="text/javascript" src="../assets/js/form.js"></script>
-
+    </footer>
+    <script type="text/javascript" src="../assets/js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="../assets/js/form.js"></script>
 </body>
 </html>
