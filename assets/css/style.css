@@ -255,7 +255,7 @@ html,body{
 }
 .popup_image {
 	display:none;
-	position: fixed;
+	position: absolute;
 	top: 10%;
 	left: 23%;
 	width: 50%;
